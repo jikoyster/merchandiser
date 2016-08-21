@@ -1,0 +1,146 @@
+@primary-color: #ffffff;
+@link-color: #ffc;
+@link-hover-color: #fff;
+
+@site-width: 1366px;
+
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma;
+	background: #116;
+}
+
+a{
+	color: @link-color;
+	text-decoration: none;
+}
+a:hover{
+	color: @link-hover-color;
+}
+
+.clear{ clear: both; }
+
+.minWidth{
+	margin: 0 auto;
+	width: @site-width;
+}
+
+#topbar{
+	text-align: right;
+	padding: 0 0 0 10px;
+	background: #000;
+	color: @primary-color;
+
+	#logoBox{
+		font-size: 1.5em;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		float: left;
+		padding-top: 10px;
+	}
+
+	#loginForm{
+		margin: 0;
+		padding: 5px 20px;
+		background: #666;
+		float: right;
+
+		ul{
+			margin: 0;
+			padding: 5px 0;
+
+			li{
+				display: inline-block;
+				list-style: none;
+				margin-right: 5px;
+
+				input[type='text'], input[type='password']{
+					padding: 5px;
+					font-size: 1em;
+				}
+				input[type='submit']{
+					font-size: 1em;
+					text-transform: uppercase;
+					letter-spacing: 5px;
+					padding: 5px 15px;
+					border: 1px solid @primary-color;
+					border-radius: 3px;
+					background: green;
+					color: @primary-color;
+				}
+			}
+		}
+	}
+}//topBar
+
+
+@tab-color: #333;
+@tab-hover-color: #000;
+@subtab-color: #116 !important;
+	@subtab-text-color: #fff !important;
+@subtab-hover-color: #000 !important;
+	@subtab-hover-text-color: #ffc !important;
+
+#main_tab{
+	margin: 0;
+	padding: 0 0px;
+	width: 100%;
+	background: @tab-color;
+
+	ul{
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		li.current_page, li:hover{
+			a{
+				background: @tab-hover-color;
+			}
+		}
+		li{
+			list-style: none;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+
+			a{
+				display: inline-block;
+				padding: 10px 20px 10px 0;
+				text-indent: 20px;
+				letter-spacing: 3px;
+				background: @tab-color;
+			}
+			a:hover{
+				background: @tab-hover-color
+			}
+
+			//submenu
+			ul{
+				display: none;
+				position: absolute;
+				border: 1px solid #fff;
+
+				li{
+					display: block;
+
+					a{
+						display: block;
+						color: @subtab-text-color;
+						background: @subtab-color;
+					}
+					a:hover{
+						background: @subtab-hover-color;
+						color: @subtab-hover-text-color;
+					}
+				}
+			}
+		}
+		
+		li.separator{
+			height: 1px;
+			background: #000;
+		}
+	}
+}//#main_tab
+

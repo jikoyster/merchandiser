@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma;
+  background: #111166;
+}
+a {
+  color: #ffffcc;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+.clear {
+  clear: both;
+}
+.minWidth {
+  margin: 0 auto;
+  width: 1366px;
+}
+#topbar {
+  text-align: right;
+  padding: 0 0 0 10px;
+  background: black;
+  color: white;
+}
+#topbar #logoBox {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  float: left;
+  padding-top: 10px;
+}
+#topbar #loginForm {
+  margin: 0;
+  padding: 5px 20px;
+  background: #666666;
+  float: right;
+}
+#topbar #loginForm ul {
+  margin: 0;
+  padding: 5px 0;
+}
+#topbar #loginForm ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 5px;
+}
+#topbar #loginForm ul li input[type='text'],
+#topbar #loginForm ul li input[type='password'] {
+  padding: 5px;
+  font-size: 1em;
+}
+#topbar #loginForm ul li input[type='submit'] {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 5px 15px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background: green;
+  color: white;
+}
+#main_tab {
+  margin: 0;
+  padding: 0 0px;
+  width: 100%;
+  background: #333333;
+}
+#main_tab ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#main_tab ul li.current_page a,
+#main_tab ul li:hover a {
+  background: black;
+}
+#main_tab ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#main_tab ul li a {
+  display: inline-block;
+  padding: 10px 20px 10px 0;
+  text-indent: 20px;
+  letter-spacing: 3px;
+  background: #333333;
+}
+#main_tab ul li a:hover {
+  background: black;
+}
+#main_tab ul li ul {
+  display: none;
+  position: absolute;
+  border: 1px solid white;
+}
+#main_tab ul li ul li {
+  display: block;
+}
+#main_tab ul li ul li a {
+  display: block;
+  color: white !important;
+  background: #111166 !important;
+}
+#main_tab ul li ul li a:hover {
+  background: black !important;
+  color: #ffffcc !important;
+}
+#main_tab ul li.separator {
+  height: 1px;
+  background: black;
+}

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet/less" type="text/css" href="{{ asset('css/less/main.less') }}">
+{% endblock %}
+
+{% block less %}
+    <script type="text/javascript" src="{{ asset('js/less.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    
+    <div class="minWidth">
+        <div id="topbar">
+            <div id="logoBox">
+                <a href="#">Merchandiser</a>
+            </div>
+
+            <form action="" method="post" id="loginForm">
+                <ul>
+                    <li>
+                        <label for="Username">Username</label>
+                        <input type="text" name="username" />
+                    </li>
+                    <li>
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" />
+                    </li>
+                    <li>
+                        <input type="submit" value="Login">
+                    </li>
+                </ul>
+            </form>
+            
+        <div class="clear"></div>
+        </div>
+    </div>
+    <!-- end: #topbar -->
+
+    {% include 'menu.html.twig' %}
+    
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery-3.1.0.min.js') }}"></script>
+        <script src="{{ asset('js/login.js') }}"></script>
+    {% endblock %}
+{% endblock %}
+
+
