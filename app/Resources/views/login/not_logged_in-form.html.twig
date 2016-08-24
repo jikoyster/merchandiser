@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" 
+        >
+    <link rel="stylesheet/less" type="text/css" href="{{ asset('css/less/main.less') }}">
+{% endblock %}
+
+{% block less %}
+    <script type="text/javascript" src="{{ asset('js/less.min.js') }}"></script>
+{% endblock %}
+
+{% block menu %}
+	{% include 'default/header.html.twig' %}
+{% endblock %}
+
+{% block body %}
+
+
+
+<div class="not_logged_in">
+	
+    <div class="login_form_wrapper">
+        <form action="/auth" method="post">
+            <div class="row">
+                <div class="col-md-2">Username: </div>
+                <div class="col-md-2"><input type="text" name="username" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Password: </div>
+                <div class="col-md-2"><input type="text" name="password" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">&nbsp;</div>
+                <div class="col-md-2"><input type="submit" value="Login" /></div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery-3.1.0.min.js') }}"></script>
+        <script src="{{ asset('js/login.js') }}"></script>
+    {% endblock %}
+{% endblock %}
+
+

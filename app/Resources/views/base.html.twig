@@ -9,9 +9,13 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}
+        <div class="minWidth">
             {% block menu %}{% endblock %}
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
+
+            <div class="mainBody">
+                {% block body %}{% endblock %}
+            </div>
+            {% block javascripts %}{% endblock %}
+        </div>
     </body>
 </html>

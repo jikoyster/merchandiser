@@ -14,13 +14,19 @@ class LoginController extends Controller
      * @Route("/", name="homepage")
      */
     public function indexAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        
+    {   
         return $this->render('login/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
-        
-    
+    }
+
+    /**
+     * @Route("/login")
+     */
+    public function loginAction()
+    {
+        return $this->render('login/not_logged_in-form.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        ]);
     }
 }
